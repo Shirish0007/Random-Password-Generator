@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+    <h1>
+        Generate Random Password
+    </h1>
+    
+    <div id="input">
+        <label for="PasswordLength">Enter password length:</label>
+        <input type="number" id="PasswordLength" value="6" min="6" max="50" required> <br><br>
+    
+        <label>Do you want to include Lowercase Characters?</label><br>
+        <div class="radio-group">
+            <input type="radio" name="LowerCase" id="LowerCaseYes" value="true">
+            <label for="LowerCaseYes">Yes</label>
+            <input type="radio" name="LowerCase" id="LowerCaseNo" value="false" checked>
+            <label for="LowerCaseNo">No</label>
+        </div><br><br>
+    
+        <label>Do you want to include Uppercase Characters?</label><br>
+        <div class="radio-group">
+            <input type="radio" name="UpperCase" id="UpperCaseYes" value="true">
+            <label for="UpperCaseYes">Yes</label>
+            <input type="radio" name="UpperCase" id="UpperCaseNo" value="false" checked>
+            <label for="UpperCaseNo">No</label>
+        </div><br><br>
+    
+        <label>Do you want to include Symbols?</label><br>
+        <div class="radio-group">
+            <input type="radio" name="Symbols" id="SymbolsYes" value="true">
+            <label for="SymbolsYes">Yes</label>
+            <input type="radio" name="Symbols" id="SymbolsNo" value="false" checked>
+            <label for="SymbolsNo">No</label>
+        </div><br><br>
+    
+        <label>Do you want to include Numbers?</label><br>
+        <div class="radio-group">
+            <input type="radio" name="Numbers" id="NumbersYes" value="true">
+            <label for="NumbersYes">Yes</label>
+            <input type="radio" name="Numbers" id="NumbersNo" value="false" checked>
+            <label for="NumbersNo">No</label>
+        </div><br><br>
+    
+    </div>
+    
+    <button id="generatedPassword" onclick="generatePassword()">Generate Password</button>
+    <p id="result"></p>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
